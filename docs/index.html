@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="">
 <head>
@@ -30,12 +31,27 @@
 	</style>
 	<base href="." />
 </head>
-<body ng-controller="CheckoutController">
+<body>
 	<div class="content">
-		<ui-view></ui-view>
+		<ui-view>
+			
+		<div class="col__12-12 u__side-padding-off u__bottom-padding-off body__p-updown-medium">
+		 <div class="drop-down__label col__5-12 u__side-padding-off pickupLocationText">We'll hold your items at</div>
+		  <div class="col__7-12 u__vertical-padding-off">
+		   <span class="drop-down__title drop-down__title--select">
+			<select class="drop-down__select ng-pristine ng-untouched ng-valid ng-not-empty" name="pickupLocation" id="pickupLocation" ng-model="pickUpOptions.pickUpDesk" aria-invalid="false">
+			 <option value="Customer Service Desk" selected="selected">Customer Service Desk</option>
+			 <option value="Pro Service Desk">Pro Desk</option>
+			</select>
+		  </span>
+		 </div>
+		</div>
+
+		</ui-view>
 	</div>
 	<div id="lpbuttondiv-hd" ng-if="!isNativeApp">
-		<div id="lpbuttondiv-global"></div>
+		<div id="lpbuttondiv-global">
+</div>
 	</div>
 	<input type="hidden" name="hat_env" value="MwAM1rpBgQseSZqqzY0lSpsCyl0c7Ykg9HYkCalrhnc=">
 	<input type="hidden" name="hat_env_id" value="6726">
@@ -45,7 +61,9 @@
 
 
 
-		<script src="vendor.min.1.2002.0.js"></script>
-		<!-- <script src="online.1.2002.0.js"></script> -->
+		<script src="vendor.min.1.2002.0.js">
+</script>
+		<!-- <script src="online.1.2002.0.js">
+</script> -->
 
 </html>
