@@ -44,6 +44,27 @@
   </div>
           <!-- / FILTER SORT VIEW -->
           <div class="grid">
+		<div class="col__12-12">
+<div ng-if="!zipcodeFailure" class="col__6-12 u__right-padding-off u__top-padding-off u__bottom-padding-off zipcodeMessageAlignParent ng-scope">
+<span class="form-input">
+<label class="form-input__label ng-scope">
+<span class="form-input__label-content">City, State</span>
+</label>
+
+<div ng-show="showCitySelector &amp;&amp; (zipInput.zip.$valid || (user.deliveryZipCode &amp;&amp; type==='shipping'))" class="col__12-12 u__padding-off u__p-bottom-xsmall" aria-hidden="false">
+<span class="drop-down__title drop-down__title--select ng-pristine ng-valid" ng-form="" name="stateInput">
+<select id="cityStateListSelector" class="drop-down__select ng-pristine ng-untouched ng-valid ng-not-empty" ng-change="onCitySelect(cityStateSelection)" autocomplete="billing street-address" name="pickupLocation" data-pii="" aria-invalid="false">
+<option label="AUSTIN, TX" value="AUSTIN_0" class="ng-binding ng-scope" selected="selected">AUSTIN, TX</option>
+<option label="EUBANK ACRES, TX" value="EUBANKACRES_1" class="ng-binding ng-scope">EUBANK ACRES, TX</option>
+<option label="NORTH OAKS, TX" value="NORTHOAKS_2" class="ng-binding ng-scope">NORTH OAKS, TX</option>
+<option label="DESSAU, TX" value="DESSAU_3" class="ng-binding ng-scope">DESSAU, TX</option>
+<option label="WALNUT FOREST, TX" value="WALNUTFOREST_4" class="ng-binding ng-scope">WALNUT FOREST, TX</option>
+</select>
+</span>
+</div>
+</span>
+</div>			
+		  </div>
             <div class="col__12-12">
               <div class="grid">
                 <div class="col__12-12 col__12-12--xs col__4-12--sm col__4-12--md col__4-12--lg col__4-12--xl col__4-12--xxl">
